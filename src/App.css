@@ -2,7 +2,7 @@
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.135fr 1.5fr 0.75fr 0.5fr;
+  grid-template-rows: 0.05fr 1.5fr 0.75fr 0.5fr;
   grid-template-areas:
     "nav nav nav"
     "main main main"
@@ -10,23 +10,8 @@
     "footer footer footer";
 }
 
-nav {
-  position: fixed;
-  background: #000000;
+.navbar__component {
   grid-area: nav;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100%;
-  z-index: 1;
-}
-
-nav > h4,
-a {
-  text-decoration: none !important;
-  color: #fff;
 }
 
 a:hover,
@@ -35,7 +20,7 @@ h4:hover {
 }
 
 main {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0,5)),
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 5)),
     url("./images/codingclass.jpg");
   background-repeat: no-repeat;
   -moz-background-size: cover;
@@ -45,28 +30,66 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
+  padding: 15px;
 }
-main > h2,
+main > h1,
 h4 {
   color: #fff !important;
 }
 
+.button__spacing {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
 .content1__content {
-  background: #64ffd2;
+  background: #000;
   grid-area: content1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff !important;
+  padding: 25px;
 }
 .content2__content {
-  background: #64ffda;
+  background: #000;
   grid-area: content2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff !important;
+  padding: 25px;
 }
 .content3__content {
-  background: #73ffba;
+  background: #000;
   grid-area: content3;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #fff !important;
+  padding: 25px;
 }
+
 footer {
-  background: #1de9b6;
+  background: #000;
   grid-area: footer;
+  color: #fff !important;
+  padding: 25px;
+}
+
+.businesses {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #fff !important;
+  padding: 25px;
 }
 
 @media only screen and (max-width: 550px) {
