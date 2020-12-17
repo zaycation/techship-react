@@ -2,31 +2,54 @@
   display: grid;
   height: 100vh;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.175fr 1fr 0.75fr 0.5fr;
+  grid-template-rows: 0.135fr 1.5fr 0.75fr 0.5fr;
   grid-template-areas:
     "nav nav nav"
     "main main main"
     "content1 content2 content3"
     "footer footer footer";
-  grid-gap: 0.15rem;
 }
 
 nav {
-  background: #14213d;
+  position: fixed;
+  background: #000000;
   grid-area: nav;
   display: flex;
+  justify-content: space-around;
   align-items: center;
-  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  z-index: 1;
 }
-h4, a {
+
+nav > h4,
+a {
   text-decoration: none !important;
   color: #fff;
 }
 
+a:hover,
+h4:hover {
+  color: #fca311 !important;
+}
 
 main {
-  background: #84ffff;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0,5)),
+    url("./images/codingclass.jpg");
+  background-repeat: no-repeat;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+main > h2,
+h4 {
+  color: #fff !important;
 }
 
 .content1__content {
