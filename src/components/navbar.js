@@ -12,6 +12,9 @@ import {
 import { MdAccountCircle } from "react-icons/md";
 import { Link } from "react-router-dom";
 
+//image imports
+import Logo from "../images/logo192.png";
+
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -26,12 +29,18 @@ const NavBar = (props) => {
         fixed="top"
         className="navbar__component"
       >
-        <NavbarBrand href="/">TECH~SHIP</NavbarBrand>
+        <NavbarBrand href="/">
+          <div className="navbar__image">
+            <img src={Logo} alt="white logo transp" width="25px" />
+            <span>&nbsp;&nbsp;</span>
+            TECH~SHIP
+          </div>
+        </NavbarBrand>
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
-          <Nav className="m-auto" navbar>
+          <Nav className="mr-auto" navbar>
             <NavItem>
-              <Link to="/">
+              <Link to="/mission">
                 <NavLink className="navbar__links">Mission</NavLink>
               </Link>
             </NavItem>

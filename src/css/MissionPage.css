@@ -1,0 +1,23 @@
+#mission__container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.05fr 0.9fr 2fr 1.5fr;
+  grid-template-areas:
+    "nav nav nav"
+    "banner banner banner"
+    "main main main"
+    "footer footer footer";
+}
+
+@media only screen and (max-width: 550px) {
+  #mission__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.175fr 0.75fr 1fr 1.5fr;
+    grid-template-areas:
+      "nav"
+      "banner"
+      "main"
+      "footer";
+  }
+}

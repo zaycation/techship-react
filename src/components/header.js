@@ -20,10 +20,10 @@ function Header() {
       <br />
       <div className="button__spacing">
         <ButtonGroup>
-          <Button outline size="lg" variant="light">
+          <Button outline size="lg" variant="secondary" className="btn__left">
             Apply for a Scholarship
           </Button>
-          <Button outline size="lg" variant="light">
+          <Button outline size="lg" variant="secondary" className="btn__right">
             View Program Options
           </Button>
         </ButtonGroup>
