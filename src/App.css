@@ -10,86 +10,16 @@
     "footer footer footer";
 }
 
-.navbar__component {
-  grid-area: nav;
-}
-
-a:hover,
-h4:hover {
-  color: #fca311 !important;
-}
-
-main {
-  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 5)),
-    url("./images/codingclass.jpg");
-  background-repeat: no-repeat;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  grid-area: main;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 15px;
-}
-main > h1,
-h4 {
-  color: #fff !important;
-}
-
-.button__spacing {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.content1__content {
-  background: #000;
-  grid-area: content1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff !important;
-  padding: 25px;
-}
-.content2__content {
-  background: #000;
-  grid-area: content2;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff !important;
-  padding: 25px;
-}
-.content3__content {
-  background: #000;
-  grid-area: content3;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: #fff !important;
-  padding: 25px;
-}
-
-footer {
-  background: #000;
-  grid-area: footer;
-  color: #fff !important;
-  padding: 25px;
-}
-
-.businesses {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
-  color: #fff !important;
-  padding: 25px;
+#mission__container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.05fr 0.9fr 2fr 1.5fr;
+  grid-template-areas:
+    "nav nav nav"
+    "banner banner banner"
+    "main main main"
+    "footer footer footer";
 }
 
 @media only screen and (max-width: 550px) {
@@ -104,4 +34,20 @@ footer {
       "content3"
       "footer";
   }
+}
+
+@media only screen and (max-width: 550px) {
+  #mission__container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.175fr 0.75fr 1fr 1.5fr;
+    grid-template-areas:
+      "nav"
+      "banner"
+      "main"
+      "footer";
+  }
+}
+
+.navbar__links {
+  color: #fff !important;
 }

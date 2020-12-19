@@ -7,13 +7,10 @@ import {
   Nav,
   NavItem,
   NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
   NavbarText,
 } from "reactstrap";
 import { MdAccountCircle } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const NavBar = (props) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -34,20 +31,23 @@ const NavBar = (props) => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className="m-auto" navbar>
             <NavItem>
-              <NavLink href="/">Mission</NavLink>
+              <Link to="/">
+                <NavLink className="navbar__links">Mission</NavLink>
+              </Link>
             </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Program
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>Pricing</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Curriculum</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
             <NavItem>
-              <NavLink href="/">Donate</NavLink>
+              <Link to="/">
+                <NavLink to="/" className="navbar__links">
+                  Programs
+                </NavLink>
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link to="/">
+                <NavLink to="/" className="navbar__links">
+                  Donate
+                </NavLink>
+              </Link>
             </NavItem>
           </Nav>
           <NavbarText>
